@@ -1,0 +1,17 @@
+# Cluster Node definition
+
+[masternode]
+10.0.0.18 ansible_user=root ansible_become=yes ansible_become_method=sudo
+
+[workernodes]
+10.0.0.4 ansible_user=root ansible_become=yes ansible_become_method=sudo
+
+[k8s-all:children]
+masternode
+workernodes
+
+[k8s-master:children]
+masternode
+
+[k8s-worker:children]
+workernodes

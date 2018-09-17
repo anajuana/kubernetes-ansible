@@ -3,10 +3,10 @@
 pod_network_cidr: 10.244.0.0/16
 
 # Allow running pods on master (yes/no=default)
-allow_pods_on_master: 'no'
+allow_pods_on_master: 'yes'
 
 # Deploy demo environment settings, not for production environments! (yes/no=default)
-demo_environment: 'no'
+demo_environment: 'yes'
 
 # Flannel version and url
 flannel_url: https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
